@@ -1,2 +1,12 @@
 syntax = "proto";
-service saudador = {};
+service Saudador {
+  rpc DizerOla (SolicitacaoOla) returns (RespostaOla) {}
+}
+
+message SolicitacaoOla {        // estrutura do pacote
+  string nome = 1;
+}
+
+message RespostaOla {
+  string mensagem = 1;
+}
